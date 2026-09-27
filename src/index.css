@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 220 30% 15%;
+
+    --card: 40 30% 99%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 40 30% 99%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 220 45% 20%;
+    --primary-foreground: 40 40% 95%;
+
+    --secondary: 35 80% 55%;
+    --secondary-foreground: 220 45% 15%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 35 80% 55%;
+    --accent-foreground: 220 45% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 220 45% 20%;
+
+    --radius: 0.5rem;
+
+    --gold: 40 75% 50%;
+    --gold-light: 40 70% 70%;
+    --saffron: 25 90% 55%;
+    --navy: 220 45% 20%;
+    --navy-light: 220 35% 35%;
+    --success: 145 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Source Sans 3', sans-serif;
+
+    --sidebar-background: 220 45% 15%;
+    --sidebar-foreground: 40 40% 95%;
+    --sidebar-primary: 35 80% 55%;
+    --sidebar-primary-foreground: 220 45% 15%;
+    --sidebar-accent: 220 40% 25%;
+    --sidebar-accent-foreground: 40 40% 95%;
+    --sidebar-border: 220 35% 25%;
+    --sidebar-ring: 35 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(40, 75%, 50%), hsl(25, 90%, 55%));
+  }
+  .gradient-navy {
+    background: linear-gradient(135deg, hsl(220, 45%, 20%), hsl(220, 35%, 35%));
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(40, 75%, 50%), hsl(25, 90%, 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .shadow-gold {
+    box-shadow: 0 10px 40px -10px hsl(40, 75%, 50%, 0.3);
+  }
+  .shadow-navy {
+    box-shadow: 0 10px 40px -10px hsl(220, 45%, 20%, 0.3);
+  }
+}
